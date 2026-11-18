@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}img{max-width:100%}html{-webkit-text-size-adjust:100%}</style>
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Traffic Angola</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--card:#141b34;--card2:#1a2344;--txt:#eef1fb;--mut:#9aa4c7;--pri:#6c5ce7;--pri2:#00d4aa;--line:#26305a;--warn:#ffb84d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:10px 16px}
+.nvtop{justify-content:space-between;min-height:56px;padding-top:8px;padding-bottom:4px}
+.nvbar{border-top:1px solid var(--line);padding-top:4px;padding-bottom:4px}
+.logo{white-space:nowrap;font-weight:800;font-size:1.3rem;letter-spacing:-.5px}
+.logo span{color:var(--pri2)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.95rem;color:var(--mut)}
+nav ul a:hover{color:var(--txt)}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:600;padding:12px 22px;border-radius:10px;background:linear-gradient(135deg,var(--pri),#8e7dff);color:#fff;transition:.15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.1)}
+.btn:focus-visible,.tab:focus-visible,.ptab:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--pri2);outline-offset:2px}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+.btn.sm{padding:8px 14px;font-size:.88rem}
+.hero{padding:84px 0 64px;text-align:center}
+.tag{display:inline-block;padding:6px 14px;border:1px solid var(--line);border-radius:99px;color:var(--pri2);font-size:.85rem;margin-bottom:20px}
+h1{font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.1;letter-spacing:-1.5px;max-width:800px;margin:0 auto 18px;text-wrap:balance}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--pri2),#8e7dff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:620px;margin:0 auto 28px;font-size:1.1rem}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:54px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat b{display:block;font-size:1.8rem;color:var(--pri2)}
+.stat small{color:var(--mut)}
+section{padding:70px 0}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem);letter-spacing:-.8px;text-align:center;margin-bottom:10px;text-wrap:balance}
+.sub{color:var(--mut);text-align:center;max-width:600px;margin:0 auto 40px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0}
+.step i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--pri);font-style:normal;font-weight:700;margin-bottom:14px}
+.step h3{margin-bottom:6px;font-size:1.05rem}
+.step p{color:var(--mut);font-size:.93rem}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;align-items:stretch}
+.plan{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;min-width:0}
+.plan.pop{border-color:var(--pri);background:linear-gradient(180deg,#1d2550,var(--card))}
+.plan .badge{position:absolute;top:-12px;right:20px;background:var(--pri2);color:#06231c;font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:99px}
+.plan h3{font-size:1.25rem}
+.plan .who{color:var(--mut);font-size:.9rem;margin:4px 0 16px}
+.price{font-size:2.3rem;font-weight:800;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.price small{font-size:.9rem;font-weight:500;color:var(--mut)}
+.note{color:var(--pri2);font-size:.84rem;margin:6px 0 18px;min-height:2.8em}
+.plan ul{list-style:none;margin-bottom:24px;flex:1}
+.plan li{padding:7px 0 7px 26px;position:relative;font-size:.93rem;border-bottom:1px dashed var(--line)}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--pri2);font-weight:700}
+.plan li.no{color:#6c76a0;text-decoration:line-through}
+.plan li.no::before{content:"✕";color:#6c76a0}
+.plan li.ad{color:var(--txt);font-weight:600}
+.plan .btn{text-align:center;width:100%}
+.disc{text-align:center;color:var(--mut);font-size:.85rem;margin-top:22px}
+.tabs{display:flex;gap:8px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.tab,.ptab{padding:10px 20px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer;font:inherit;font-weight:600}
+.tab.on,.ptab.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.two-plans{max-width:820px;margin-left:auto;margin-right:auto}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}
+.panel.on{display:block}
+.ph{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.ph h3{font-size:1.15rem}
+.pill{display:inline-block;padding:3px 11px;border-radius:99px;font-size:.78rem;font-weight:600;background:#243061;color:#b9c4ff}
+.pill.g{background:#0f3d34;color:#5ff0cf}
+.pill.o{background:#463618;color:var(--warn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--card2);border-radius:12px;padding:14px}
+.kpi small{color:var(--mut);display:block}
+.kpi b{font-size:1.5rem;font-variant-numeric:tabular-nums}
+.kpi em{font-style:normal;font-size:.8rem;color:var(--pri2)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+tr.tot td{font-weight:700;border-top:2px solid var(--line)}
+.tw{overflow-x:auto}
+.bars{display:flex;align-items:flex-end;gap:8px;height:120px;margin:6px 0 4px}
+.bars div{flex:1;background:linear-gradient(var(--pri2),var(--pri));border-radius:6px 6px 0 0;min-height:8px}
+.lab{display:flex;gap:8px;color:var(--mut);font-size:.75rem}
+.lab span{flex:1;text-align:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--card2);border-radius:12px;padding:16px;min-width:0}
+.box h4{margin-bottom:10px;font-size:.95rem}
+.meter{height:10px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,var(--pri2),var(--pri))}
+.chk{list-style:none}
+.chk li{padding:6px 0;font-size:.9rem;color:var(--mut)}
+.chk li.d{color:var(--txt)}
+.chk li::before{content:"○ ";color:var(--pri2)}
+.chk li.d::before{content:"● "}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--mut);margin-top:10px;font-size:.93rem}
+footer{border-top:1px solid var(--line);padding:30px 0 96px;color:var(--mut);text-align:center;font-size:.88rem}
+.modal{position:fixed;inset:0;background:rgba(3,6,16,.78);display:none;place-items:center;z-index:50;padding:16px}
+.modal.on{display:grid}
+.mbox{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;width:100%;max-width:500px;max-height:92vh;overflow:auto}
+.mbox h3{margin-bottom:4px}
+.mbox p.s{color:var(--mut);font-size:.9rem;margin-bottom:12px}
+.prog{display:flex;gap:6px;margin-bottom:16px}
+.prog span{flex:1;height:5px;border-radius:99px;background:var(--line)}
+.prog span.on{background:var(--pri2)}
+.stp{font-size:.78rem;color:var(--pri2);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.6px}
+label{display:block;font-size:.82rem;color:var(--mut);margin:12px 0 5px}
+input,select{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--card2);color:var(--txt);font:inherit}
+input[type=checkbox]{width:auto;margin-right:8px;accent-color:var(--pri2)}
+.hint{font-size:.78rem;color:var(--mut);margin-top:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.g2>div{min-width:0}
+.row{display:flex;gap:10px;margin-top:20px}
+.row .btn{flex:1}
+.mgr{display:flex;align-items:center;gap:14px;background:var(--card2);border-radius:12px;padding:14px;margin:8px 0 14px}
+.av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--pri2));display:grid;place-items:center;font-weight:700;flex:none}
+.mgr small{color:var(--mut);display:block}
+.vid{background:#070b18;border:1px dashed var(--line);border-radius:12px;aspect-ratio:16/9;max-width:100%;display:grid;place-items:center;text-align:center;padding:14px;overflow:hidden}
+.vid video{width:100%;height:100%;border-radius:10px}
+.vid b{display:block;font-size:2rem;color:var(--pri2)}
+.vid small{color:var(--mut)}
+.pay{display:grid;gap:8px;margin:12px 0}.pm{background:var(--card2);border-radius:12px;padding:12px;display:grid;gap:3px;min-width:0}.pm small{color:var(--mut)}.pm code{font-size:.85rem;word-break:break-all;color:var(--txt)}
+.vup{margin-top:8px;font-size:.8rem;color:var(--mut)}
+.vup input{padding:6px;font-size:.8rem}
+.how{margin:14px 0 6px 18px;color:var(--mut);font-size:.9rem}
+.how li{padding:3px 0}
+.how b{color:var(--txt)}
+.cf{display:flex;align-items:center;background:var(--card2);border-radius:10px;padding:12px;margin-top:12px;color:var(--txt);font-size:.9rem}
+.ok{text-align:center}
+.ok .big{font-size:3rem}
+.sum{background:var(--card2);border-radius:12px;padding:14px;margin:16px 0;text-align:left;font-size:.9rem}
+.sum div{display:flex;justify-content:space-between;gap:12px;padding:4px 0}
+.sum div span{color:var(--mut)}
+.sum div b{text-align:right}
+.vs{display:flex;align-items:center;gap:8px;margin:0;color:var(--mut)}
+.vs select{width:auto}
+.mini{width:70px;height:6px;border-radius:99px;background:var(--line);overflow:hidden;display:inline-block;vertical-align:middle;margin-right:8px}
+.mini i{display:block;height:100%;background:var(--pri2)}
+.mini.full i{background:var(--warn)}
+.qi{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+td select{padding:6px 8px;font-size:.85rem;width:auto}
+@media(max-width:760px){nav ul{display:none}.two{grid-template-columns:1fr}.g2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+[hidden]{display:none!important}
+.navtabs{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:thin}
+.nt{border:0;background:transparent;color:var(--mut);font:inherit;font-weight:600;padding:9px 14px;border-radius:9px;cursor:pointer;white-space:nowrap}
+.nt:hover{color:var(--txt)}
+.nt.on{color:var(--txt);background:var(--card2);box-shadow:inset 0 -2px 0 var(--pri2)}
+.nt:focus-visible,.chi:focus-visible,textarea:focus-visible{outline:2px solid var(--pri2);outline-offset:2px}
+.cnt{display:inline-block;min-width:18px;padding:0 5px;margin-left:7px;border-radius:99px;background:var(--warn);color:#2a1c00;font-size:.72rem;text-align:center}
+.as{display:flex;align-items:center;gap:8px;color:var(--mut);font-size:.82rem;margin:0}
+.as select{width:auto;padding:6px 8px}
+.app{padding:40px 0 60px}
+.vt{text-align:left;font-size:clamp(1.5rem,3vw,2rem);margin-bottom:6px}
+.app .sub{text-align:left;margin:0 0 24px;max-width:none}
+.chat{display:grid;grid-template-columns:220px 1fr;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-height:440px}
+.chlist{display:flex;flex-direction:column;gap:4px;padding:12px;border-right:1px solid var(--line)}
+.chi{border:0;background:transparent;color:var(--mut);font:inherit;text-align:left;padding:9px 12px;border-radius:9px;cursor:pointer}
+.chi.on{background:var(--card2);color:var(--txt)}
+.chmain{display:flex;flex-direction:column;min-width:0}
+.chhead{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.chhead small{color:var(--mut)}
+.chmsgs{flex:1;padding:16px;overflow-y:auto;height:340px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:82%;background:var(--card2);border-radius:12px;padding:8px 12px;font-size:.92rem;overflow-wrap:anywhere}
+.msg small{display:block;color:var(--mut);font-size:.74rem;margin-bottom:2px}
+.msg.me{align-self:flex-end;background:#2b2f73}
+.chform{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.chform input{flex:1;min-width:0}
+.tk{border-bottom:1px solid var(--line);padding:12px 0}
+.tk:last-child{border-bottom:0}
+.tkh{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.tk small{color:var(--mut)}
+.tk p{margin-top:6px;font-size:.9rem;overflow-wrap:anywhere}
+.tk .ans{color:var(--pri2)}
+.tkr{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.tkr input{flex:1;min-width:140px}
+textarea{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:var(--card2);color:var(--txt);font:inherit;min-height:96px;resize:vertical}
+.wa{margin-top:14px;font-size:.85rem;color:var(--mut)}
+
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:600;color:#fff;padding:13px 18px;border-radius:99px;background:linear-gradient(135deg,var(--pri),#8e7dff);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.fab:hover{filter:brightness(1.1)}
+.fab:focus-visible,.dwx:focus-visible{outline:2px solid var(--pri2);outline-offset:2px}
+.fab .cnt{margin-left:0}
+.dw{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:45;width:min(380px,calc(100vw - 32px));max-height:calc(100vh - 150px);display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.55);overflow:hidden}
+.dwh{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.dwx{border:0;background:transparent;color:var(--mut);font-size:1.5rem;line-height:1;cursor:pointer;padding:2px 8px;border-radius:8px}
+.dwb{padding:14px 16px;overflow-y:auto}
+.dwb h4{margin:18px 0 6px;font-size:.95rem}
+@media(max-width:760px){.chat{grid-template-columns:1fr}.chlist{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.chi{white-space:nowrap}.msg{max-width:92%}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nvtop">
+    <a href="#inicio" class="logo">Traffic <span>Angola</span></a>
+    <label class="as" for="role">Ver como
+      <select id="role"><option value="visitante" selected>Visitante</option><option value="cliente">Cliente</option><option value="parceiro">Parceiro (gestor) 🔒</option><option value="admin">Erbisaldo (ADM) 🔒</option></select>
+    </label>
+  </div>
+  <div class="wrap nvbar"><div class="navtabs" id="navtabs"></div></div>
+</nav>
+
+<main>
+<div class="view" id="v-inicio">
+<header class="hero"><div class="wrap">
+  <span class="tag">Tráfego pago e marketing digital em Angola</span>
+  <h1>Anuncia no Facebook, Instagram, Google e YouTube <em>sem precisar de cartão internacional</em></h1>
+  <p>Escolhe um plano mensal completo ou só tráfego pago de 15 em 15 dias. A nossa equipa cria e gere os teus anúncios, e nós pagamos as plataformas por ti.</p>
+  <div class="cta"><button class="btn" type="button" onclick="goTo('planos')">Ver planos</button><button class="btn ghost" type="button" onclick="goTo('como')">Como funciona</button></div>
+  <div class="stats">
+    <div class="stat"><b>4</b><small>Planos, do teste à escala</small></div>
+    <div class="stat"><b>100%</b><small>Dos anúncios pagos por nós, sem cartão Visa</small></div>
+    <div class="stat"><b>15 dias</b><small>Para testar só com tráfego pago</small></div>
+    <div class="stat"><b>24h</b><small>Para iniciar a tua gestão</small></div>
+  </div>
+</div></header>
+
+<section id="como"><div class="wrap">
+  <h2>Como funciona</h2>
+  <p class="sub">Quatro passos simples, do registo aos resultados.</p>
+  <div class="steps">
+    <div class="step"><i>1</i><h3>Subscreves</h3><p>Escolhes o plano e dizes-nos o nome da tua loja e da tua página.</p></div>
+    <div class="step"><i>2</i><h3>Adicionas o teu gestor</h3><p>Mostramos-te o gestor atribuído e um vídeo ensina-te a dar-lhe acesso à tua página, sem partilhar senhas.</p></div>
+    <div class="step"><i>3</i><h3>Nós executamos</h3><p>O gestor publica, lança os anúncios e paga as plataformas por ti, dentro do que o teu plano inclui.</p></div>
+    <div class="step"><i>4</i><h3>Acompanhas resultados</h3><p>Vês no teu painel quantas pessoas viram o anúncio, quantos contactos e vendas gerou.</p></div>
+  </div>
+</div></section>
+
+<section id="canais"><div class="wrap">
+  <h2>Onde os teus anúncios aparecem</h2>
+  <p class="sub">Cada canal tem o seu papel. Nós gerimos todos e escolhemos a melhor divisão para o teu negócio.</p>
+  <div class="steps">
+    <div class="step"><h3>Facebook e Instagram</h3><p>Mostram o teu produto a quem está nas redes sociais e levam mensagens para o WhatsApp.</p><p style="margin-top:10px"><span class="pill g">Todos os planos</span></p></div>
+    <div class="step"><h3>Google</h3><p>Anúncios na pesquisa: aparecem quando alguém procura o que vendes.</p><p style="margin-top:10px"><span class="pill">Crescimento, Turbo e Escala</span></p></div>
+    <div class="step"><h3>YouTube</h3><p>Anúncios em vídeo para quem ainda não te conhece. Precisas de enviar um vídeo.</p><p style="margin-top:10px"><span class="pill">Crescimento, Turbo e Escala</span></p></div>
+  </div>
+</div></section>
+
+<section id="planos" style="background:#0e1530"><div class="wrap">
+  <h2>Escolhe o teu plano</h2>
+  <p class="sub">Os anúncios estão incluídos e são pagos por nós. Escolhe um plano mensal completo ou só tráfego pago, de 15 em 15 dias.</p>
+  <div class="tabs">
+    <button class="ptab on" type="button" data-g="mensal" aria-selected="true">Planos mensais</button>
+    <button class="ptab" type="button" data-g="trafego" aria-selected="false">Só tráfego pago · 15 dias</button>
+  </div>
+
+  <div class="plans two-plans" id="g-mensal">
+    <div class="plan">
+      <h3>Básico</h3><div class="who">Pequenos vendedores a começar</div>
+      <div class="price">25.000 Kz<small> /mês</small></div>
+      <div class="note">Anúncios incluídos: $12 ≈ 14.400 Kz, pagos por nós.</div>
+      <ul>
+        <li class="ad">Tráfego pago: 1 anúncio por semana a $3/dia ($12 por mês), no Facebook e Instagram</li>
+        <li>Gestor atribuído à tua conta</li>
+        <li>Organização do perfil (Instagram/Facebook)</li>
+        <li>1 publicação por semana (4 por mês)</li>
+        <li>Relatório mensal simples</li>
+        <li class="no">Monitorização semanal</li>
+      </ul>
+      <button class="btn ghost" type="button" onclick="openSub('basico')">Subscrever Básico</button>
+    </div>
+    <div class="plan pop">
+      <span class="badge">Mais completo</span>
+      <h3>Crescimento</h3><div class="who">Empresas de médio porte</div>
+      <div class="price">150.000 Kz<small> /mês</small></div>
+      <div class="note">Anúncios incluídos: $80 ≈ 96.000 Kz, pagos por nós.</div>
+      <ul>
+        <li class="ad">Tráfego pago: 8 campanhas por mês de 2 dias, a $5/dia ($80): 4 no Facebook e Instagram, 2 no Google e 2 no YouTube</li>
+        <li>Gestor dedicado à tua conta</li>
+        <li>12 publicações por mês (3 por semana)</li>
+        <li>Monitorização e otimização semanal</li>
+        <li>Painel de resultados em tempo real</li>
+        <li>Suporte por WhatsApp</li>
+        <li>Site para os anúncios do Google: se ainda não tens, criamos por 15.000 Kz (pagamento único)</li>
+      </ul>
+      <button class="btn" type="button" onclick="openSub('crescimento')">Subscrever Crescimento</button>
+    </div>
+  </div>
+
+  <div class="plans two-plans" id="g-trafego" hidden>
+    <div class="plan pop">
+      <span class="badge">Mais escolhido</span>
+      <h3>Turbo</h3><div class="who">Para quem já vende e quer mais clientes</div>
+      <div class="price">130.000 Kz<small> /15 dias</small></div>
+      <div class="note">Anúncios incluídos: $75 ≈ 90.000 Kz, pagos por nós.</div>
+      <ul>
+        <li class="ad">Anúncios ativos todos os 15 dias a $5/dia ($75): 7 dias no Facebook e Instagram, 5 no Google e 3 no YouTube</li>
+        <li>Gestor atribuído à tua conta</li>
+        <li>Até 3 anúncios por ciclo, montados com as tuas fotos e vídeos</li>
+        <li>Otimização semanal dos anúncios</li>
+        <li>Relatório no fim de cada ciclo</li>
+        <li class="no">Publicações e gestão de redes sociais</li>
+        <li>Site para os anúncios do Google: se ainda não tens, criamos por 15.000 Kz (pagamento único)</li>
+      </ul>
+      <button class="btn" type="button" onclick="openSub('turbo')">Subscrever Turbo</button>
+    </div>
+    <div class="plan">
+      <h3>Escala</h3><div class="who">Para quem quer vender com mais força</div>
+      <div class="price">210.000 Kz<small> /15 dias</small></div>
+      <div class="note">Anúncios incluídos: $120 ≈ 144.000 Kz, pagos por nós.</div>
+      <ul>
+        <li class="ad">Anúncios ativos todos os 15 dias a $8/dia ($120): $4 Facebook e Instagram, $2 Google e $2 YouTube por dia</li>
+        <li>Gestor sénior atribuído à tua conta</li>
+        <li>Até 5 anúncios por ciclo, montados com as tuas fotos e vídeos</li>
+        <li>Otimização duas vezes por semana</li>
+        <li>Relatório completo no fim de cada ciclo</li>
+        <li class="no">Publicações e gestão de redes sociais</li>
+        <li>Site para os anúncios do Google: se ainda não tens, criamos por 15.000 Kz (pagamento único)</li>
+      </ul>
+      <button class="btn ghost" type="button" onclick="openSub('escala')">Subscrever Escala</button>
+    </div>
+  </div>
+  <p class="disc">Preços de exemplo, com o dólar a 1.200 Kz. O pagamento é feito antes do início de cada ciclo. Os planos de 15 dias renovam sozinhos e podes cancelar entre ciclos. O YouTube só entra se enviares um vídeo; sem vídeo, o valor fica nos outros canais. O anúncio no Google precisa de um site: se não tens, criamos um site simples de uma página (com o teu WhatsApp, fotos e contactos, num endereço gratuito; domínio .com próprio é opcional e pago à parte). Plano Premium para grandes empresas: em breve.</p>
+</div></section>
+
+<section id="faq" style="background:#0e1530"><div class="wrap" style="max-width:760px">
+  <h2>Perguntas frequentes</h2><p class="sub">Tudo o que os clientes costumam perguntar.</p>
+  <details><summary>Preciso de cartão internacional para anunciar?</summary><p>Não. Nós pagamos os anúncios (Facebook, Instagram, Google e YouTube) com os nossos meios, e esse valor já está incluído no teu plano.</p></details>
+  <details><summary>A página continua a ser minha?</summary><p>Sim. A página e os seguidores são teus. Tu apenas adicionas o teu gestor como anunciante, sem partilhar a senha, e podes retirá-lo quando quiseres.</p></details>
+  <details><summary>Em que redes anunciam?</summary><p>Facebook e Instagram em todos os planos. Google e YouTube nos planos Crescimento, Turbo e Escala. O YouTube precisa de um vídeo enviado por ti, e o Google precisa de um site ou página de destino.</p></details>
+  <details><summary>Os anúncios garantem vendas?</summary><p>Não. Garantimos o investimento nos anúncios e o trabalho do gestor, mas as vendas dependem do teu produto, do preço e da concorrência. Os melhores resultados costumam aparecer a partir do segundo ciclo.</p></details>
+  <details><summary>Qual a diferença entre o plano mensal e o de 15 dias?</summary><p>Os planos mensais incluem gestão de redes sociais e publicações. Os de 15 dias são só tráfego pago: tu envias as fotos e os vídeos e nós montamos e gerimos os anúncios.</p></details>
+  <details><summary>Posso mudar de plano ou cancelar?</summary><p>Sim. Podes mudar no mês seguinte (ou no ciclo seguinte, nos planos de 15 dias) e cancelar entre ciclos. Os anúncios param no fim do período já pago.</p></details>
+  <details><summary>E se eu não tiver um site?</summary><p>Para anunciar no Google é preciso um site. Se ainda não tens, criamos um site simples de uma página, com o teu WhatsApp, fotos e contactos, num endereço gratuito. Um domínio .com próprio é opcional e pago à parte. Custa 15.000 Kz, pago uma só vez. No plano Básico não é preciso, porque só anuncia no Facebook e Instagram.</p></details>
+  <details><summary>Como pago?</summary><p>Três formas: transferência por IBAN (do mesmo banco), transferência por Express ou pagamento por referência. Depois de pagares, envias o comprovativo pelo chat de suporte e confirmamos. O pagamento é feito antes de os anúncios começarem, e o que já foi gasto em anúncios não é reembolsado.</p></details>
+</div></section>
+</div>
+<div class="view" id="v-cliente" hidden><section class="app"><div class="wrap">
+  <h2 class="vt">Painel do Cliente</h2><p class="sub">É isto que o cliente vê. Cada cliente só tem acesso ao Painel do Cliente e ao botão de Suporte.</p>
+  <div class="panel on" id="cli">
+    <div class="ph"><h3>Olá, Loja Bela Casa</h3><span class="pill g">Plano Crescimento · Ativo</span></div>
+    <div class="kpis">
+      <div class="kpi"><small>Pessoas alcançadas</small><b>31.480</b><em>▲ 18% este mês</em></div>
+      <div class="kpi"><small>Cliques no anúncio</small><b>1.390</b><em>▲ 9%</em></div>
+      <div class="kpi"><small>Mensagens no WhatsApp</small><b>142</b><em>▲ 24%</em></div>
+      <div class="kpi"><small>Campanhas usadas</small><b>5 de 8</b><em>incluídas no plano</em></div>
+    </div>
+    <div class="two">
+      <div class="box"><h4>Mensagens por semana</h4>
+        <div class="bars"><div style="height:35%"></div><div style="height:55%"></div><div style="height:48%"></div><div style="height:90%"></div></div>
+        <div class="lab"><span>Sem 1</span><span>Sem 2</span><span>Sem 3</span><span>Sem 4</span></div></div>
+      <div class="box"><h4>O teu gestor</h4>
+        <p><b id="cliMgr">Gestor 1</b><br><span style="color:var(--mut)">Gestor sénior · responde em até 2h</span></p>
+        <p style="margin-top:12px"><span class="pill g">Acesso à página: confirmado</span></p>
+        <h4 style="margin-top:16px">Campanhas do mês</h4>
+        <div class="meter"><i style="width:62%"></i></div>
+        <p style="color:var(--mut);font-size:.85rem">5 de 8 usadas · próxima: Sofás 2026, 2 dias, $5/dia</p>
+        <h4 style="margin-top:16px">Próximo relatório</h4>
+        <p><span class="pill">Sexta-feira, 10h</span></p></div>
+    </div>
+    <p class="hint" style="margin-top:12px">Dados de exemplo, só para demonstração.</p>
+  </div>
+</div></section></div>
+<div class="view" id="v-parceiro" hidden><section class="app"><div class="wrap">
+  <h2 class="vt">Painel do Parceiro</h2><p class="sub">Cada gestor vê só os clientes que lhe foram atribuídos. O admin escolhe qual gestor quer ver.</p>
+  <div class="panel on" id="ges">
+    <div class="ph"><h3>Painel do Parceiro</h3><label class="vs" for="who">Gestor <select id="who"></select></label></div>
+    <div id="pbody"></div>
+  </div>
+
+</div></section></div>
+<div class="view" id="v-admin" hidden><section class="app"><div class="wrap">
+  <h2 class="vt">Painel do Admin</h2><p class="sub">Só o dono da plataforma vê esta área: receita, equipa, clientes e atribuição de gestores.</p>
+  <div class="panel on" id="adm">
+    <div class="ph"><h3>Visão geral da plataforma</h3><span class="pill">Administrador</span></div>
+    <div class="kpis">
+      <div class="kpi"><small>Clientes ativos</small><b id="kCli">17</b><em>em 5 gestores</em></div>
+      <div class="kpi"><small>Receita mensal</small><b id="kRev">2,05M Kz</b><em>planos mensais e de 15 dias</em></div>
+      <div class="kpi"><small>Gasto em anúncios</small><b id="kMeta">893 mil Kz</b><em id="kPct">44% da receita</em></div>
+      <div class="kpi"><small>Pagamentos pendentes</small><b>3</b><em>a cobrar</em></div>
+    </div>
+    <div class="tw"><table>
+      <thead><tr><th>Plano</th><th>Clientes</th><th>Receita/mês</th><th>Custo anúncios</th><th>Sobra</th></tr></thead>
+      <tbody id="plansBody"></tbody>
+    </table></div>
+    <p class="hint" style="margin-top:8px">Regra: no máximo 70% de cada pagamento vai para anúncios. O resto fica para a plataforma, que paga equipa e custos. Os planos de 15 dias contam 2 ciclos por mês, se o cliente renovar. Dólar a 1.200 Kz.</p>
+
+    <div id="codesBox"></div>
+
+    <div class="box" style="margin-top:16px"><h4>Equipa de gestores (5 lugares, contigo incluído)</h4>
+      <div class="tw"><table>
+        <thead><tr><th>Gestor</th><th>Nível</th><th>Carga</th><th>Clientes</th><th>Estado</th></tr></thead>
+        <tbody id="partnersBody"></tbody>
+      </table></div>
+      <p class="hint" style="margin-top:8px">Altera o estado para "Ausente" e esse gestor deixa de receber clientes novos.</p>
+    </div>
+
+    <div class="two" style="margin-top:16px">
+      <div class="box"><h4>Como o sistema escolhe o gestor</h4>
+        <ol class="how">
+          <li>Só entram gestores <b>Disponíveis</b> e com espaço livre (limite de 12 pontos).</li>
+          <li>O plano Escala só vai para gestores <b>Sénior</b>.</li>
+          <li>Fica quem tem <b>menos carga</b>. Em caso de empate, quem está há mais tempo sem receber cliente.</li>
+          <li>Pontos: Básico 1, Crescimento 3, Turbo 3, Escala 4.</li>
+        </ol>
+      </div>
+      <div class="box"><h4>Fila de espera</h4>
+        <div id="queue"><p class="hint">Nenhum cliente à espera. Quando todos os gestores estiverem cheios, os novos clientes ficam aqui.</p></div>
+        <h4 style="margin-top:16px">Novos clientes (da demo)</h4>
+        <ul class="chk" id="newClients"><li>Ainda nenhum. Experimenta subscrever um plano acima.</li></ul>
+      </div>
+    </div>
+  </div>
+</div></section></div>
+<div class="view" id="v-conversas" hidden><section class="app"><div class="wrap">
+  <h2 class="vt">Conversas da equipa</h2><p class="sub">Espaço só para gestores e admin. Os clientes não têm acesso a esta área.</p>
+  <div class="chat">
+    <div class="chlist" id="chlist"></div>
+    <div class="chmain">
+      <div class="chhead" id="chhead"></div>
+      <div class="chmsgs" id="chmsgs" aria-live="polite"></div>
+      <form class="chform" id="chform"><input id="chin" aria-label="Mensagem" autocomplete="off"><button class="btn sm" id="chsend" type="submit">Enviar</button></form>
+    </div>
+  </div>
+  <p class="hint" style="margin-top:10px">Mensagens de exemplo, só para demonstração.</p>
+</div></section></div>
+<div class="view" id="v-suporte" hidden><section class="app"><div class="wrap">
+  <h2 class="vt">Suporte</h2><p class="sub">Caixa de entrada com os pedidos dos clientes. Responde e marca como resolvido.</p>
+  <div class="box"><h4>Pedidos dos clientes</h4><div id="tkList"></div></div>
+</div></section></div>
+</main>
+
+<footer><div class="wrap">© 2026 Traffic Angola · Versão de demonstração da ideia</div></footer>
+
+<div class="modal" id="modal"><div class="mbox" id="mbox"></div></div>
+
+<button class="fab" id="fab" type="button" aria-expanded="false" aria-controls="dw" hidden>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span>Suporte</span><span class="cnt" id="fabCnt" hidden></span>
+</button>
+<div class="dw" id="dw" role="dialog" aria-label="Suporte" hidden>
+  <div class="dwh"><b>Suporte</b><button type="button" class="dwx" id="dwx" aria-label="Fechar suporte">×</button></div>
+  <div class="dwb">
+    <p class="hint">Fala com a nossa equipa. Respondemos em até 24h.</p>
+    <form id="dwForm">
+      <label for="dwSub">Assunto</label>
+      <select id="dwSub"><option>Dúvida sobre anúncios</option><option>Acesso à página</option><option>Pagamento</option><option>Mudar de plano</option><option>Outro</option></select>
+      <label for="dwMsg">Mensagem</label>
+      <textarea id="dwMsg" required placeholder="Explica o que precisas"></textarea>
+      <div class="row"><button class="btn" type="submit">Enviar pedido</button></div>
+    </form>
+    <p class="wa">Urgente? Fala connosco por WhatsApp: <b>9XX XXX XXX</b></p>
+    <h4>Os meus pedidos</h4>
+    <div id="dwList"></div>
+  </div>
+</div>
+
+<script>
+const PLANS={
+  basico:{n:"Básico",p:25000,per:"mês",mult:1,pts:1,ads:"$3/dia, 1 dia por semana ($12/mês), Facebook e Instagram",cost:14400},
+  crescimento:{n:"Crescimento",p:150000,per:"mês",mult:1,pts:3,ads:"8 campanhas de 2 dias a $5/dia ($80/mês): Facebook e Instagram, Google e YouTube",cost:96000},
+  turbo:{n:"Turbo",p:130000,per:"15 dias",mult:2,pts:3,ads:"$5/dia durante 15 dias ($75): Facebook e Instagram, Google e YouTube",cost:90000},
+  escala:{n:"Escala",p:210000,per:"15 dias",mult:2,pts:4,ads:"$8/dia durante 15 dias ($120): Facebook e Instagram, Google e YouTube",cost:144000}
+};
+const CAP=12,SENIOR=["escala"];
+let tick=5,novos=0;
+const mk=(n,p,t,s)=>({n,p,t,s});
+let partners=[
+ {n:"Erbisaldo (ADM)",lvl:"Sénior",st:"Disponível",last:3,cl:[mk("Hotel Costa Azul","crescimento","Relatório semanal","Em dia"),mk("Frutas do Kwanza","basico","Publicar post de sexta","Em dia")]},
+ {n:"Gestor 1",lvl:"Sénior",st:"Disponível",last:5,cl:[mk("Auto Luanda Motors","escala","Otimizar anúncios (dia 6 de 15)","Em dia"),mk("Loja Bela Casa","crescimento","Criar 3 criativos novos","Pendente"),mk("Doces da Tia Rosa","basico","Anúncio de 1 dia na publicação escolhida","Em dia"),mk("TechPlus Angola","crescimento","Relatório semanal","Pendente"),mk("Padaria Sol Nascente","basico","Aguardando que o cliente adicione o gestor","Aguardando acesso")]},
+ {n:"Gestor 2",lvl:"Júnior",st:"Disponível",last:2,cl:[mk("Clínica Vida+","turbo","Otimizar anúncios (dia 9 de 15)","Em dia"),mk("Studio Fit","crescimento","Criar 3 criativos novos","Pendente"),mk("Mercearia Kamba","basico","Publicar post de sexta","Em dia"),mk("Moda Zuri","basico","Escolher publicação do anúncio","Pendente")]},
+ {n:"Gestor 3",lvl:"Júnior",st:"Disponível",last:1,cl:[mk("Pizzaria Bairro Alto","turbo","Montar anúncios do próximo ciclo","Em dia"),mk("Barbearia Real","basico","Relatório mensal","Em dia"),mk("Papelaria Estudo","basico","Publicar post de sexta","Em dia")]},
+ {n:"Gestor 4",lvl:"Sénior",st:"Disponível",last:4,cl:[mk("Imobiliária Horizonte","escala","Otimizar anúncios (dia 3 de 15)","Em dia"),mk("Loja Kota","crescimento","Otimização semanal","Pendente"),mk("Café Mwangolé","basico","Anúncio de 1 dia","Em dia")]}
+];
+let queue=[];
+const GREEN=["Em dia","Novo"];
+const fmt=n=>String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,".")+" Kz";
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const load=p=>p.cl.reduce((a,c)=>a+PLANS[c.p].pts,0);
+const modal=document.getElementById("modal"),mbox=document.getElementById("mbox");
+const prog=n=>`<div class="prog"><span class="${n>=1?"on":""}"></span><span class="${n>=2?"on":""}"></span><span class="${n>=3?"on":""}"></span></div>`;
+let data={};
+
+const VIEWS=["inicio","cliente","parceiro","admin","conversas","suporte"];
+const VN={inicio:"Início",cliente:"Painel do Cliente",parceiro:"Painel do Parceiro",admin:"Painel do Admin",conversas:"Conversas",suporte:"Suporte"};
+const ROLES={visitante:["inicio"],cliente:["inicio","cliente"],parceiro:["inicio","parceiro","conversas","suporte"],admin:VIEWS};
+let role="visitante",cur="inicio";
+const ADMIN_CODE="0916";
+const SITE={p:15000,inc:[]};
+const siteFee=d=>(d.plano!=="basico"&&d.site==="nao"&&!SITE.inc.includes(d.plano))?SITE.p:0;
+const PCODES={"001":1,"002":2,"003":3,"004":4};
+const ME={admin:"Erbisaldo (ADM)",parceiro:"Gestor 1"};
+const CLI="Loja Bela Casa";
+let tickets=[
+ {id:1,cli:"Loja Bela Casa",sub:"Pagamento",msg:"Quando devo pagar o próximo mês?",st:"Respondido",seen:true,ans:"Podes pagar até ao dia 5. Enviamos a referência por WhatsApp."},
+ {id:2,cli:"Padaria Sol Nascente",sub:"Acesso à página",msg:"Não encontro a opção de adicionar parceiro.",st:"Aberto",ans:""},
+ {id:3,cli:"Moda Zuri",sub:"Dúvida sobre anúncios",msg:"Posso escolher qual publicação leva o anúncio?",st:"Aberto",ans:""}
+];
+let nextT=4;
+const CH=[
+ {id:"geral",n:"Geral",d:"Conversa de toda a equipa",admin:false,m:[
+  {a:"Gestor 1",t:"09:12",x:"Bom dia, equipa! Já têm os criativos da semana?"},
+  {a:"Gestor 2",t:"09:20",x:"Estou a acabar os da Clínica Vida+. Envio até às 11h."},
+  {a:"Erbisaldo (ADM)",t:"09:31",x:"Perfeito. Qualquer bloqueio, avisem aqui."}]},
+ {id:"anuncios",n:"Anúncios e criativos",d:"Resultados, testes e ideias de anúncios",admin:false,m:[
+  {a:"Gestor 3",t:"08:45",x:"O anúncio de 1 dia da Barbearia Real deu 9 mensagens no WhatsApp."},
+  {a:"Gestor 4",t:"08:58",x:"Na Imobiliária Horizonte o vídeo curto está a ganhar às fotos."}]},
+ {id:"duvidas",n:"Dúvidas",d:"Pergunta aqui o que precisares",admin:false,m:[
+  {a:"Gestor 2",t:"Ontem",x:"Cliente quer mudar a publicação do anúncio a meio do ciclo. Pode?"},
+  {a:"Erbisaldo (ADM)",t:"Ontem",x:"Pode, desde que seja antes de o anúncio começar."}]},
+ {id:"avisos",n:"Avisos do admin",d:"Só o admin escreve neste canal",admin:true,m:[
+  {a:"Erbisaldo (ADM)",t:"Segunda",x:"Lembrete: nunca pedir senhas aos clientes. Só acesso como anunciante."},
+  {a:"Erbisaldo (ADM)",t:"Segunda",x:"Os anúncios só começam depois de o pagamento estar confirmado."}]}
+];
+let ch="geral";
+const isStaff=()=>role==="admin"||role==="parceiro";
+
+function renderChat(){
+  const cl=document.getElementById("chlist");
+  cl.innerHTML=CH.map(c=>`<button type="button" class="chi ${c.id===ch?"on":""}" data-c="${c.id}"># ${esc(c.n)}</button>`).join("");
+  cl.querySelectorAll("button").forEach(b=>b.onclick=()=>{ch=b.dataset.c;renderChat();});
+  const c=CH.find(x=>x.id===ch),me=ME[role]||ME.admin;
+  document.getElementById("chhead").innerHTML=`<b># ${esc(c.n)}</b><small>${esc(c.d)}</small>`;
+  const box=document.getElementById("chmsgs");
+  box.innerHTML=c.m.map(m=>`<div class="msg ${m.a===me?"me":""}"><small>${esc(m.a)} · ${esc(m.t)}</small><div>${esc(m.x)}</div></div>`).join("");
+  box.scrollTop=box.scrollHeight;
+  const can=!c.admin||role==="admin";
+  const inp=document.getElementById("chin");
+  inp.disabled=!can;inp.placeholder=can?"Escreve uma mensagem":"Só o admin pode escrever neste canal";
+  document.getElementById("chsend").disabled=!can;
+}
+
+function tkHtml(t,staff){
+  return `<div class="tk"><div class="tkh"><b>${esc(t.sub)}</b><span class="pill ${t.st==="Aberto"?"o":"g"}">${t.st}</span></div>
+    <small>${staff?esc(t.cli)+" · ":""}Pedido #${t.id}</small>
+    <p>${esc(t.msg)}</p>
+    ${t.ans?`<p class="ans"><b>Equipa:</b> ${esc(t.ans)}</p>`:""}
+    ${staff&&t.st!=="Resolvido"?`<div class="tkr"><input id="r${t.id}" aria-label="Resposta ao pedido ${t.id}" placeholder="Escrever resposta"><button class="btn sm" type="button" data-r="${t.id}">Responder</button><button class="btn ghost sm" type="button" data-s="${t.id}">Resolvido</button></div>`:""}</div>`;
+}
+
+function renderSupport(){
+  const tl=document.getElementById("tkList");
+  tl.innerHTML=tickets.length?tickets.slice().reverse().map(t=>tkHtml(t,true)).join(""):`<p class="hint">Ainda não há pedidos.</p>`;
+  tl.querySelectorAll("button[data-r]").forEach(b=>b.onclick=()=>{
+    const t=tickets.find(x=>x.id==b.dataset.r),v=document.getElementById("r"+t.id).value.trim();
+    if(!v)return;t.ans=v;t.st="Respondido";t.seen=false;renderAll();
+  });
+  tl.querySelectorAll("button[data-s]").forEach(b=>b.onclick=()=>{tickets.find(x=>x.id==b.dataset.s).st="Resolvido";renderAll();});
+  const mine=tickets.filter(t=>t.cli===CLI);
+  document.getElementById("dwList").innerHTML=mine.length?mine.slice().reverse().map(t=>tkHtml(t,false)).join(""):`<p class="hint">Ainda não tens pedidos. Usa o formulário para falar com a equipa.</p>`;
+  const fab=document.getElementById("fab"),fc=document.getElementById("fabCnt");
+  fab.hidden=role!=="cliente";
+  const n=mine.filter(t=>t.ans&&!t.seen).length;
+  fc.hidden=!n;fc.textContent=n;
+}
+
+function openDw(){
+  tickets.forEach(t=>{if(t.cli===CLI)t.seen=true;});
+  document.getElementById("dw").hidden=false;
+  document.getElementById("fab").setAttribute("aria-expanded","true");
+  renderSupport();
+}
+function closeDw(){
+  document.getElementById("dw").hidden=true;
+  document.getElementById("fab").setAttribute("aria-expanded","false");
+}
+
+function renderBadge(){
+  const el=document.querySelector('#navtabs [data-v="suporte"]');if(!el)return;
+  const n=tickets.filter(t=>t.st==="Aberto").length;
+  let c=el.querySelector(".cnt");
+  if(isStaff()&&n){if(!c){c=document.createElement("span");c.className="cnt";el.appendChild(c);}c.textContent=n;}
+  else if(c)c.remove();
+}
+
+function buildNav(){
+  const nt=document.getElementById("navtabs");
+  nt.innerHTML=ROLES[role].map(v=>`<button type="button" class="nt ${v===cur?"on":""}" data-v="${v}">${VN[v]}</button>`).join("");
+  nt.querySelectorAll("button").forEach(b=>b.onclick=()=>show(b.dataset.v));
+  renderBadge();
+}
+
+function show(v,keepScroll){
+  if(!ROLES[role].includes(v))v="inicio";
+  cur=v;
+  VIEWS.forEach(x=>{document.getElementById("v-"+x).hidden=x!==v;});
+  try{if(location.hash!=="#"+v)location.hash=v;}catch(e){}
+  buildNav();
+  if(v==="conversas")renderChat();
+  if(!keepScroll)window.scrollTo(0,0);
+}
+
+function goTo(id){
+  show("inicio",true);
+  setTimeout(()=>{const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:"smooth"});},0);
+}
+
+function pick(planKey){
+  const need=PLANS[planKey].pts;
+  const c=partners.filter(x=>x.st==="Disponível"&&(!SENIOR.includes(planKey)||x.lvl==="Sénior")&&load(x)+need<=CAP);
+  if(!c.length)return null;
+  c.sort((a,b)=>load(a)-load(b)||a.last-b.last);
+  return c[0];
+}
+
+function renderAdmin(){
+  const cb=document.getElementById("codesBox");
+  cb.innerHTML=role==="admin"?`<div class="box" style="margin-top:16px"><h4>Códigos de acesso (só tu vês isto)</h4>
+    <div class="tw"><table><thead><tr><th>Quem</th><th>Código</th><th>Ações</th></tr></thead><tbody>
+    <tr><td>Erbisaldo (ADM)</td><td><b>${ADMIN_CODE}</b></td><td></td></tr>
+    ${[1,2,3,4].map(i=>{const free=DEFN.test(partners[i].n);return `<tr><td>${esc(partners[i].n)}${free?" (vaga livre)":""}</td><td><b>${codeOf(i)}</b></td><td><button class="btn sm ghost" type="button" onclick="genCode(${i})">Novo código</button>${free?"":(rmAsk===i?` <button class="btn sm" type="button" onclick="rmPartner(${i})">Confirmar remoção</button> <button class="btn sm ghost" type="button" onclick="rmAsk=0;renderAll()">Não</button>`:` <button class="btn sm ghost" type="button" onclick="rmAsk=${i};renderAll()">Remover gestor</button>`)}</td></tr>`;}).join("")}
+    </tbody></table></div><p class="hint">Dá a cada gestor só o código dele. "Novo código" invalida o anterior. "Remover gestor" liberta a vaga e muda o código; os clientes ficam na vaga para o próximo gestor. Na demonstração, as alterações só valem neste aparelho.</p></div>`:"";
+  const keys=Object.keys(PLANS);
+  let tc=0,tr=0,tm=0;
+  document.getElementById("plansBody").innerHTML=keys.map(k=>{
+    const c=partners.reduce((a,p)=>a+p.cl.filter(x=>x.p===k).length,0);
+    const r=c*PLANS[k].p*PLANS[k].mult,m=c*PLANS[k].cost*PLANS[k].mult;tc+=c;tr+=r;tm+=m;
+    return `<tr><td>${PLANS[k].n}${PLANS[k].mult>1?" (15 dias)":""}</td><td>${c}</td><td>${fmt(r)}</td><td>${fmt(m)}</td><td>${fmt(r-m)}</td></tr>`;
+  }).join("")+`<tr class="tot"><td>Total</td><td>${tc}</td><td>${fmt(tr)}</td><td>${fmt(tm)}</td><td>${fmt(tr-tm)}</td></tr>`;
+  document.getElementById("kCli").textContent=tc;
+  document.getElementById("kRev").textContent=(tr/1e6).toFixed(2).replace(".",",")+"M Kz";
+  document.getElementById("kMeta").textContent=Math.round(tm/1000)+" mil Kz";
+  document.getElementById("kPct").textContent=(tr?Math.round(tm/tr*100):0)+"% da receita";
+  document.getElementById("partnersBody").innerHTML=partners.map((p,i)=>{
+    const l=load(p);
+    return `<tr><td>${esc(p.n)}</td><td>${p.lvl}</td><td><span class="mini ${l>=CAP?"full":""}"><i style="width:${Math.min(100,l/CAP*100)}%"></i></span>${l}/${CAP}</td><td>${p.cl.length}</td><td><select data-i="${i}" aria-label="Estado de ${esc(p.n)}"><option${p.st==="Disponível"?" selected":""}>Disponível</option><option${p.st==="Ausente"?" selected":""}>Ausente</option></select></td></tr>`;
+  }).join("");
+  document.querySelectorAll("select[data-i]").forEach(sel=>sel.onchange=()=>{partners[sel.dataset.i].st=sel.value;renderAll();});
+  const q=document.getElementById("queue");
+  q.innerHTML=queue.length?queue.map((c,i)=>`<div class="qi"><span>${esc(c.emp)} · ${PLANS[c.plano].n}</span><button class="btn ghost sm" type="button" data-q="${i}">Atribuir agora</button></div>`).join(""):`<p class="hint">Nenhum cliente à espera. Quando todos os gestores estiverem cheios, os novos clientes ficam aqui.</p>`;
+  q.querySelectorAll("button[data-q]").forEach(b=>b.onclick=()=>{
+    const c=queue[b.dataset.q],x=pick(c.plano);
+    if(!x){b.textContent="Sem espaço livre";return;}
+    x.last=++tick;x.cl.push(mk(c.emp,c.plano,"Aguardar acesso à página","Aguardando acesso"));
+    queue.splice(b.dataset.q,1);renderAll();
+  });
+}
+
+function renderPartner(){
+  const sel=document.getElementById("who");
+  const p=partners[sel.value||0],l=load(p);
+  document.getElementById("pbody").innerHTML=`
+    <div class="ph"><h3>${esc(p.n)} · Os meus clientes</h3><span><span class="pill">${p.lvl}</span> <span class="pill ${p.st==="Disponível"?"g":"o"}">${p.st}</span>${role==="parceiro"?` <button class="btn sm ghost" type="button" onclick="askName(${+sel.value||0},false)">Mudar o meu nome</button>`:""}</span></div>
+    <div class="box" style="margin-bottom:16px"><h4>Capacidade: ${l} de ${CAP} pontos</h4>
+      <div class="meter"><i style="width:${Math.min(100,l/CAP*100)}%"></i></div>
+      <p class="hint">${p.cl.length} clientes · Básico 1 ponto, Crescimento 3, Turbo 3, Escala 4.</p></div>
+    <div class="tw"><table>
+      <thead><tr><th>Cliente</th><th>Plano</th><th>Tarefa de hoje</th><th>Estado</th></tr></thead>
+      <tbody>${p.cl.map(c=>`<tr><td>${esc(c.n)}</td><td>${PLANS[c.p].n}</td><td>${esc(c.t)}</td><td><span class="pill ${GREEN.includes(c.s)?"g":"o"}">${esc(c.s)}</span></td></tr>`).join("")}</tbody>
+    </table></div>
+    <div class="two" style="margin-top:16px">
+      <div class="box"><h4>Checklist de um cliente novo</h4>
+        <ul class="chk"><li class="d">Cliente adicionou o gestor à página</li><li class="d">Pagamento confirmado</li><li class="d">Receber materiais (fotos, vídeos, preços)</li><li>Criar público-alvo</li><li>Lançar anúncio no Facebook/Instagram</li><li>Enviar relatório</li></ul></div>
+      <div class="box"><h4>Ganhos</h4><p class="hint">O modelo de pagamento dos parceiros ainda está por definir.</p></div>
+    </div>`;
+}
+
+const DEFN=/^Gestor \d$/;
+let rmAsk=0;
+function codeOf(i){return Object.keys(PCODES).find(c=>PCODES[c]===i)||"—";}
+function putCode(i,c){const o=codeOf(i);if(o!=="—")delete PCODES[o];PCODES[c]=i;}
+function genCode(i){
+  let c;do{c=String(Math.floor(Math.random()*900)+100);}while(PCODES[c]||c===ADMIN_CODE.slice(1)||c===codeOf(i));
+  putCode(i,c);
+  try{const m=JSON.parse(localStorage.getItem("ta_codes")||"{}");m[i]=c;localStorage.setItem("ta_codes",JSON.stringify(m));}catch(e){}
+  if(role==="parceiro"&&+document.getElementById("who").value===i)applyRole("visitante");
+  rmAsk=0;renderAll();
+}
+function rmPartner(i){setName(i,"Gestor "+i,true);genCode(i);}
+function loadCodes(){try{const m=JSON.parse(localStorage.getItem("ta_codes")||"{}");Object.keys(m).forEach(i=>{if(PCODES&&/^\d{3}$/.test(m[i]))putCode(+i,m[i]);});}catch(e){}}
+function setName(i,nm,save){
+  const old=partners[i].n;if(old===nm)return;
+  partners[i].n=nm;
+  CH.forEach(c=>c.m.forEach(x=>{if(x.a===old)x.a=nm;}));
+  if(ME.parceiro===old)ME.parceiro=nm;
+  if(save){try{const m=JSON.parse(localStorage.getItem("ta_nomes")||"{}");m[i]=nm;localStorage.setItem("ta_nomes",JSON.stringify(m));}catch(e){}}
+}
+function loadNames(){try{const m=JSON.parse(localStorage.getItem("ta_nomes")||"{}");Object.keys(m).forEach(i=>{if(partners[i]&&typeof m[i]==="string")setName(+i,m[i],false);});}catch(e){}}
+function syncWho(){
+  const sel=document.getElementById("who");const v=sel.value||"0";
+  sel.innerHTML=partners.map((p,i)=>`<option value="${i}">${esc(p.n)}</option>`).join("");
+  sel.value=v;
+  const c=document.getElementById("cliMgr");if(c)c.textContent=partners[1].n;
+}
+function askName(i,first){
+  mbox.innerHTML=`<h3>${first?"Bem-vindo à equipa":"Mudar o meu nome"}</h3><p class="s">Escreve o nome com que queres ser chamado dentro do site. Os clientes e a equipa vão ver este nome.</p>
+  <form id="nf"><label for="nome">O meu nome</label><input id="nome" maxlength="30" autocomplete="off" required value="${DEFN.test(partners[i].n)?"":esc(partners[i].n)}">
+  <div class="hint" id="nerr" style="color:var(--warn)" hidden>Escreve pelo menos 2 letras.</div>
+  <div class="row"><button class="btn ghost" type="button" id="ncan">${first?"Depois":"Cancelar"}</button><button class="btn" type="submit">Guardar</button></div></form>`;
+  modal.classList.add("on");document.getElementById("nome").focus();
+  document.getElementById("ncan").onclick=closeM;
+  document.getElementById("nf").onsubmit=e=>{
+    e.preventDefault();
+    const nm=document.getElementById("nome").value.trim().replace(/\s+/g," ");
+    if(nm.length<2){document.getElementById("nerr").hidden=false;return;}
+    setName(i,nm,true);closeM();renderAll();
+  };
+}
+function renderAll(){syncWho();renderAdmin();renderPartner();renderSupport();renderChat();renderBadge();}
+
+(function(){
+  loadNames();loadCodes();
+  const sel=document.getElementById("who");
+  sel.innerHTML=partners.map((p,i)=>`<option value="${i}">${esc(p.n)}</option>`).join("");
+  sel.onchange=renderPartner;
+  renderAll();
+})();
+
+function openSub(key){
+  const grp=(label,keys)=>`<optgroup label="${label}">`+keys.map(k=>`<option value="${k}" ${k===key?"selected":""}>${PLANS[k].n} — ${fmt(PLANS[k].p)}/${PLANS[k].per}</option>`).join("")+`</optgroup>`;
+  const opts=grp("Planos mensais",["basico","crescimento"])+grp("Só tráfego pago (15 dias)",["turbo","escala"]);
+  mbox.innerHTML=`${prog(1)}<div class="stp">Passo 1 de 3</div><h3>Os dados do teu negócio</h3><p class="s">Demonstração: nada é guardado nem cobrado. Depois, escolhes como pagar e carregas o recibo.</p>
+  <form id="f">
+    <label for="plano">Plano</label><select id="plano" name="plano">${opts}</select>
+    <div class="g2">
+      <div><label for="emp">Nome da loja ou empresa</label><input id="emp" name="emp" required placeholder="Ex.: Loja Bela Casa"></div>
+      <div><label for="pagina">Nome da tua página</label><input id="pagina" name="pagina" required placeholder="Ex.: Bela Casa Angola"></div>
+    </div>
+    <label for="link">Link da página (Facebook ou Instagram)</label><input id="link" name="link" placeholder="facebook.com/belacasa">
+    <div class="hint">Ainda não tens página? Deixa em branco e o gestor ajuda-te a criá-la.</div>
+    <label for="produto">O que vendes?</label><input id="produto" name="produto" required placeholder="Ex.: móveis e decoração">
+    <div class="g2">
+      <div><label for="cidade">Cidade ou zona</label><input id="cidade" name="cidade" required placeholder="Ex.: Luanda, Talatona"></div>
+      <div><label for="tel">WhatsApp</label><input id="tel" name="tel" required placeholder="9XX XXX XXX"></div>
+    </div>
+    <label for="mail">Email</label><input id="mail" name="mail" type="email" required placeholder="nome@empresa.com">
+    <label for="obj">O que queres alcançar?</label>
+    <select id="obj" name="obj"><option>Mais mensagens no WhatsApp</option><option>Mais vendas</option><option>Mais seguidores</option><option>Divulgar um produto novo</option></select>
+    <label for="midia">Já tens fotos ou vídeos dos teus produtos?</label><select id="midia" name="midia"><option>Sim</option><option>Ainda não</option></select>
+    <div class="hint">Nos planos só de tráfego pago, envias o material e nós montamos os anúncios.</div>
+    <div id="siteBox"><label for="site">Já tens um site?</label>
+    <select id="site" name="site"><option value="sim">Sim, já tenho</option><option value="nao">Não, preciso que criem</option></select>
+    <input id="siteurl" name="siteurl" placeholder="Endereço do teu site, ex.: www.belacasa.com" style="margin-top:8px">
+    <div class="hint" id="siteHint"></div></div>
+    <div class="row"><button type="button" class="btn ghost" onclick="closeM()">Cancelar</button><button class="btn" type="submit">Continuar</button></div>
+  </form>`;
+  modal.classList.add("on");
+  const updSite=()=>{
+    const k=document.getElementById("plano").value,v=document.getElementById("site").value;
+    document.getElementById("siteBox").hidden=(k==="basico");
+    document.getElementById("siteurl").hidden=(v==="nao");
+    document.getElementById("siteHint").textContent=v==="nao"?(SITE.inc.includes(k)?"Criamos um site simples de uma página, incluído neste plano.":"Criamos um site simples de uma página por "+fmt(SITE.p)+", pagamento único, num endereço gratuito (domínio .com próprio é opcional, à parte)."):"O Google precisa do endereço do teu site para os anúncios.";
+  };
+  document.getElementById("plano").onchange=updSite;document.getElementById("site").onchange=updSite;updSite();
+  document.getElementById("f").onsubmit=e=>{
+    e.preventDefault();
+    data=Object.fromEntries(new FormData(e.target));
+    if(data.plano==="basico")data.site="sim";
+    data.x=pick(data.plano);
+    data.g=data.x?data.x.n:null;
+    if(!data.x){finish(false);return;}
+    step2();
+  };
+}
+
+function step2(){
+  const ini=data.g.split(" ").map(w=>w[0]).slice(0,2).join("");
+  mbox.innerHTML=`${prog(2)}<div class="stp">Passo 2 de 3</div><h3>Adiciona o teu gestor à página</h3>
+  <p class="s">Para anunciarmos por ti, o gestor precisa de acesso à página "${esc(data.pagina)}". Nunca pedimos a tua senha.</p>
+  <div class="mgr"><div class="av">${esc(ini)}</div><div><b>${esc(data.g)}</b><small>Gestor atribuído à tua conta</small></div></div>
+  <div class="vid" id="vid"><div><b>▶</b><small>Espaço reservado para o vídeo explicativo</small></div></div>
+  <div class="vup">Admin: carregar vídeo <input type="file" id="vfile" accept="video/*"></div>
+  <ol class="how">
+    <li>Abre o <b>Meta Business Suite</b> e vai às definições da tua página.</li>
+    <li>Escolhe a opção para <b>adicionar pessoas ou parceiros</b>.</li>
+    <li>Procura por <b>${esc(data.g)}</b> e dá-lhe acesso como anunciante.</li>
+    ${data.plano!=="basico"?`<li>Nos anúncios do <b>Google e do YouTube</b>, convida também ${esc(data.g)} na tua conta do Google Ads (Administração, Acesso e segurança). Se não tiveres conta, criamos contigo.</li>`:""}<li>Volta aqui e confirma abaixo.</li>
+  </ol>
+  <label class="cf" for="conf"><input type="checkbox" id="conf">Já adicionei ${esc(data.g)} à minha página</label>
+  <div class="row"><button class="btn ghost" type="button" id="later">Faço isto depois</button><button class="btn" type="button" id="done">Continuar</button></div>`;
+  document.getElementById("vfile").onchange=e=>{
+    const f=e.target.files[0];if(!f)return;
+    document.getElementById("vid").innerHTML=`<video controls src="${URL.createObjectURL(f)}"></video>`;
+  };
+  document.getElementById("later").onclick=()=>step3(false);
+  document.getElementById("done").onclick=()=>step3(document.getElementById("conf").checked);
+}
+
+
+function step3(access){
+  const pl=PLANS[data.plano];
+    mbox.innerHTML=`${prog(3)}<div class="stp">Passo 3 de 3</div><h3>Pagamento</h3>
+  <p class="s">Valor a pagar: <b>${fmt(pl.p+siteFee(data))}</b> (${pl.n}, ${pl.per}${siteFee(data)?" + criação do site "+fmt(siteFee(data))+", pagamento único":""}). Os anúncios só começam depois de confirmarmos o pagamento.</p>
+  <div class="pay">
+    <div class="pm"><b>1. Transferência bancária</b><small>Só do mesmo banco (BFA)</small><code>IBAN: 0006 0000 82080319301 33</code><small>Banco: BFA</small><small>Titular: ERBISALDO DALVA CARVALHO PAULINO</small></div>
+    <div class="pm"><b>2. Express</b><small>Pelo Multicaixa Express</small><code>Express: 933746908</code></div>
+    <div class="pm"><b>3. Referência</b><small>Pagamento por referência</small><code>Entidade: 00930/10116</code><code>Referência: 933746908</code></div>
+  </div>
+  <label for="rec">Carrega o recibo ou comprovativo (foto ou PDF)</label>
+  <input type="file" id="rec" accept="image/*,application/pdf">
+  <div class="hint" id="recn">Podes carregar agora ou mais tarde, pelo botão Suporte.</div>
+  <div class="row"><button class="btn ghost" type="button" id="plater">Pago depois</button><button class="btn" type="button" id="pdone">Concluir</button></div>`;
+  let rec=false;
+  document.getElementById("rec").onchange=e=>{const f=e.target.files[0];rec=!!f;document.getElementById("recn").textContent=f?("Recibo selecionado: "+f.name):"Podes carregar agora ou mais tarde, pelo botão Suporte.";};
+  document.getElementById("plater").onclick=()=>finish(access,false);
+  document.getElementById("pdone").onclick=()=>finish(access,rec);
+}
+
+function finish(access,rec){
+  const pl=PLANS[data.plano];
+  const waiting=!data.x;
+  const est=waiting?"Em fila de espera":(!rec?"Aguardando pagamento":(access?"Pagamento em análise":"Aguardando acesso"));
+  const msg=waiting?"Todos os gestores estão com a agenda cheia neste momento. Avisamos por WhatsApp quando um ficar livre.":(!rec?"Subscrição registada. Falta pagares e carregares o recibo para começarmos.":(access?"Recebemos o teu recibo. Assim que confirmarmos o pagamento, o gestor começa em até 24h.":"Recebemos o teu recibo. Falta adicionares o gestor à página."));
+  mbox.innerHTML=`<div class="ok">${prog(3)}<div class="big">🎉</div><h3>Bem-vindo, ${esc(data.emp)}!</h3>
+  <p class="s">${msg}</p>
+  <div class="sum">
+    <div><span>Plano</span><b>${pl.n}</b></div>
+    <div><span>Pagamento</span><b>${fmt(pl.p)} / ${pl.per}${siteFee(data)?" + "+fmt(siteFee(data))+" (site, uma vez)":""}</b></div>
+    ${pl.n!=="Básico"?`<div><span>Site</span><b>${data.site==="nao"?(siteFee(data)?"A criar por nós":"A criar por nós (incluído)"):"Já tens um site"}</b></div>`:""}
+    <div><span>Anúncios incluídos</span><b>${pl.ads}</b></div>
+    <div><span>Gestor atribuído</span><b>${waiting?"A atribuir":esc(data.g)}</b></div>
+    <div><span>Página</span><b>${esc(data.pagina)}</b></div>
+    <div><span>Renovação</span><b>${pl.mult>1?"A cada 15 dias, automática":"Todos os meses"}</b></div>
+    <div><span>Estado</span><b>${est}</b></div>
+  </div>
+  <p class="hint">O pagamento é feito antes de os anúncios começarem. Se ainda não enviaste o recibo, carrega-o pelo botão Suporte. A equipa é avisada por WhatsApp de cada subscrição (na versão real).</p>
+  <div class="row"><button class="btn" type="button" onclick="closeM()">Fechar</button></div></div>`;
+  if(waiting){queue.push({emp:data.emp,plano:data.plano});}
+  else{data.x.last=++tick;data.x.cl.push(mk(data.emp,data.plano,(data.site==="nao"&&data.plano!=="basico")?"Criar o site do cliente":(access?"Iniciar a gestão":"Aguardar acesso à página"),access?"Novo":"Aguardando acesso"));}
+  const ul=document.getElementById("newClients");
+  if(!novos)ul.innerHTML="";
+  novos++;
+  ul.innerHTML+=`<li class="d">${esc(data.emp)} · ${pl.n} · ${waiting?"sem gestor livre":"gestor: "+esc(data.g)} · ${est}</li>`;
+  renderAll();
+}
+
+function closeM(){modal.classList.remove("on")}
+modal.onclick=e=>{if(e.target===modal)closeM()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeM();closeDw();}});
+document.querySelectorAll(".ptab").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll(".ptab").forEach(x=>{x.classList.remove("on");x.setAttribute("aria-selected","false")});
+  t.classList.add("on");t.setAttribute("aria-selected","true");
+  document.getElementById("g-mensal").hidden=t.dataset.g!=="mensal";
+  document.getElementById("g-trafego").hidden=t.dataset.g!=="trafego";
+});
+
+document.getElementById("chform").onsubmit=e=>{
+  e.preventDefault();
+  const i=document.getElementById("chin"),v=i.value.trim();
+  if(!v||i.disabled)return;
+  CH.find(x=>x.id===ch).m.push({a:ME[role]||ME.admin,t:"agora",x:v});
+  i.value="";renderChat();
+};
+document.getElementById("fab").onclick=()=>{document.getElementById("dw").hidden?openDw():closeDw();};
+document.getElementById("dwx").onclick=closeDw;
+document.getElementById("dwForm").onsubmit=e=>{
+  e.preventDefault();
+  const m=document.getElementById("dwMsg").value.trim();
+  if(!m)return;
+  tickets.push({id:nextT++,cli:CLI,sub:document.getElementById("dwSub").value,msg:m,st:"Aberto",ans:"",seen:true});
+  document.getElementById("dwMsg").value="";renderAll();
+};
+function applyRole(r){
+  role=r;closeDw();document.getElementById("role").value=r;
+  document.getElementById("who").disabled=(r==="parceiro");
+  if(r==="parceiro"){ME.parceiro=partners[+document.getElementById("who").value||1].n;}
+  show(ROLES[role].includes(cur)?cur:"inicio",true);
+  renderAll();
+}
+function askCode(r){
+  const nome=r==="admin"?"Erbisaldo (ADM)":"Parceiro (gestor)";
+  mbox.innerHTML=`<h3>Entrar como ${nome}</h3><p class="s">Esta área é só para a equipa. Escreve o código de acesso que o administrador te deu.</p>
+  <form id="cf"><label for="cod">Código de acesso</label><input id="cod" type="text" inputmode="numeric" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" style="-webkit-text-security:disc" required>
+  <div class="hint" id="cerr" style="color:var(--warn)" hidden>Código incorreto.</div>
+  <div class="row"><button class="btn ghost" type="button" id="ccan">Cancelar</button><button class="btn" type="submit">Entrar</button></div></form>`;
+  modal.classList.add("on");
+  document.getElementById("cod").focus();
+  const back=()=>{document.getElementById("role").value=role;closeM();};
+  document.getElementById("ccan").onclick=back;
+  document.getElementById("cf").onsubmit=e=>{
+    e.preventDefault();
+    const c=document.getElementById("cod").value.replace(/\s/g,"");
+    if(r==="admin"&&c===ADMIN_CODE){closeM();applyRole("admin");}
+    else if(r==="parceiro"&&PCODES[c]){closeM();document.getElementById("who").value=PCODES[c];applyRole("parceiro");if(DEFN.test(partners[PCODES[c]].n))askName(PCODES[c],true);}
+    else{document.getElementById("cerr").hidden=false;}
+  };
+}
+document.getElementById("role").onchange=e=>{
+  const r=e.target.value;
+  if(r==="parceiro"||r==="admin")askCode(r);else applyRole(r);
+};
+window.addEventListener("hashchange",()=>{const v=location.hash.slice(1);if(VIEWS.includes(v)&&v!==cur)show(v);});
+{const h=location.hash.slice(1);show(VIEWS.includes(h)?h:"inicio",true);}
+</script>
+
+</body>
+</html>
